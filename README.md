@@ -1,3 +1,3 @@
-# Lab Assignment 7
+# RGB to Grayscale
 
-Click `Code` > `Codespaces` > `Create codespace on main` to start coding!
+I implemented a one-stage pipelined RGB-to-Grayscale conversion module entirely using fixed-point arithmetic. I created the core rgb2gray module by computing weighted combinations of the R, G, and B channels with carefully scaled fixed-point constants, ensuring high numerical accuracy without using floating-point or divide operations. I then authored a comprehensive SystemVerilog testbench that evaluated my design alongside the five obfuscated reference modules. Using floating-point computations as a reference model, I computed RMS error across randomized inputs to identify which reference designs were incorrect. Throughout the process, I reused elastic pipeline components from earlier labs to structure clean dataflow, and ultimately demonstrated that my implementation produced accurate grayscale outputs while adhering to fixed-point precision constraints.
